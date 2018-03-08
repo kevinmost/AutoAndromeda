@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="8dp"
+      >
+
+      <TextView
+        android:id="@+id/tv_is_rooted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/is_rooted_yes"
+        />
+
+      <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+      <Button
+        android:id="@+id/btn_more_magisk_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help"
+        />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="8dp"
+      >
+
+      <TextView
+        android:id="@+id/tv_is_substratum_installed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/is_substratum_installed_yes"
+        />
+
+      <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+      <Button
+        android:id="@+id/btn_install_substratum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/install"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="8dp"
+      >
+
+      <TextView
+        android:id="@+id/tv_is_andromeda_installed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/is_andromeda_installed_yes"
+        />
+
+      <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+      <Button
+        android:id="@+id/btn_install_andromeda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/install"
+        />
+    </LinearLayout>
+
+    <ViewSwitcher
+      android:id="@+id/vs_good_to_go"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      >
+
+      <TextView
+        android:id="@+id/not_good_to_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_good_to_go_justification"
+        />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/good_to_go"
+          />
+
+        <Button
+          android:id="@+id/btn_show_debug_screen"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/debug"
+          />
+      </LinearLayout>
+    </ViewSwitcher>
+  </LinearLayout>
+</ScrollView>

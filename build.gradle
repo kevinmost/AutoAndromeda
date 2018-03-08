@@ -1,0 +1,32 @@
+buildscript {
+  ext.versions = [
+      kotlin: "1.2.21",
+      libsu: "1.1.1",
+  ]
+  ext.deps = [
+      kotlin: [
+          stdlib: "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin",
+      ],
+      libsu: "com.github.topjohnwu:libsu:$versions.libsu",
+  ]
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.0.1'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
